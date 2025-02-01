@@ -8,14 +8,14 @@
 import Foundation
 
 class QuoteProvider {
-    private var quotes: [Quotes]?
+    private var quotesResponse : QuoteResponse?
     
     init() {
         loadQuotes()
     }
     
     func getQuotes() -> [Quotes]{
-        return quotes ?? []
+        return quotesResponse?.data ?? []
     }
     
     private func loadQuotes() {
@@ -27,7 +27,7 @@ class QuoteProvider {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            self.quotes = try decoder.decode([Quotes].self, from: data)
+            self.quotesResponse = try decoder.decode(QuoteResponse.self, from: data)
         } catch {
             print("Failed to load quotes: \(error.localizedDescription)")
         }

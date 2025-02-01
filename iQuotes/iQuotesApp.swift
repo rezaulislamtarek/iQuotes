@@ -13,5 +13,6 @@ struct iQuotesApp: App {
         WindowGroup {
             ContentView()
         }
+         
     }
 }

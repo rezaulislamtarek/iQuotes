@@ -7,9 +7,17 @@
 
 import Foundation
 
-struct Quotes : Codable, Identifiable {
-    var id = UUID().uuidString
-    let quote : String
-    let author : String
-    let category : String
+struct QuoteResponse : Codable {
+    let data : [Quotes]?
 }
+
+struct Quotes : Codable {
+    let quote : String?
+    let author : String?
+    let category : String?
+}
+/*
+"quote": "The way to get started is to quit talking and begin doing.",
+"author": "Walt Disney",
+"category": "Motivation & Success"
+*/
