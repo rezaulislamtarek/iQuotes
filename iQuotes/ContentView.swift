@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var tapCount = 0 // Count the number of taps
     @State private var tapTimer: Timer? = nil // Timer to track the delay for tap recognition
     @State private var showLikeAnimation = false
+    @State private var isMoving = false
     
     var body: some View{
         GeometryReader{ proxy in
@@ -43,10 +44,34 @@ struct ContentView: View {
                 LottieView(filename: "love_lottie")
                     .opacity(showLikeAnimation == true ? 1 : 0)
             }
+            .overlay(alignment: .bottom) {
+                VStack{
+                    Image(systemName: "arrow.up")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24 )
+                        .padding(16)
+                        .offset(y: isMoving ? 20 : 0)
+                        .animation(Animation.easeInOut(duration: 1.0)
+                            .repeatForever(autoreverses: true),
+                                   value: isMoving
+                        )
+                    Text("Swap up to read more quotes")
+                }
+                .padding(.bottom, 32)
+                    .onTapGesture {
+                        currentIndex += 1
+                    }
+            }
         }
         .ignoresSafeArea(.all, edges: .all)
         .overlay (alignment: .top){
             HomeToolBarView()
+        }
+        .fontDesign(.serif)
+        .onAppear {
+            // Start the animation when view appears
+            isMoving = true
         }
         
     }
@@ -102,8 +127,6 @@ struct QuoteCardView: View {
             Text( "- \(quote.author ?? "")" )
                 .frame(maxWidth: .infinity, alignment: .center)
         }
-        .fontDesign(.serif)
-        
         .foregroundStyle(.iqTextc)
         .multilineTextAlignment(.center)
         .padding()
@@ -114,8 +137,6 @@ struct QuoteCardView: View {
         .padding()
         .frame(width: size.width, height: size.height)
         .background(.iqBgc)
-         
-        
     }
 }
 
@@ -133,8 +154,8 @@ struct HomeToolBarView: View {
                 .padding(.horizontal)
                 .foregroundColor(.primary)
         }.padding()
-            
-             
+        
+        
         
     }
 }
