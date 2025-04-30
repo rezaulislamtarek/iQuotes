@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var tapTimer: Timer? = nil // Timer to track the delay for tap recognition
     @State private var showLikeAnimation = false
     @State private var isMoving = false
+    @State private var disableSwipeView = false
     
     var body: some View{
         GeometryReader{ proxy in
@@ -58,10 +59,18 @@ struct ContentView: View {
                         )
                     Text("Swap up to read more quotes")
                 }
+                .onChange(of: currentIndex, { oldValue, newValue in
+                    withAnimation(.easeInOut(duration: 0.8)) {
+                        disableSwipeView = currentIndex >= 2
+                    }
+                })
                 .padding(.bottom, 32)
-                    .onTapGesture {
+                .onTapGesture {
+                    withAnimation {
                         currentIndex += 1
                     }
+                }
+                .opacity(disableSwipeView ? 0 : 1 )
             }
         }
         .ignoresSafeArea(.all, edges: .all)
@@ -132,7 +141,6 @@ struct QuoteCardView: View {
         .padding()
         .padding(.vertical, 80)
         .background(.ultraThickMaterial)
-        //.background(.ultraThickMaterial.opacity(0.5))
         .cornerRadius(20)
         .padding()
         .frame(width: size.width, height: size.height)
