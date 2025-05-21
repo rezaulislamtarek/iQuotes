@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2A738E2DC205C1006FE3E5 /* TextToSpece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2A738D2DC205AE006FE3E5 /* TextToSpece.swift */; };
 		0BABB4232DC0DDCB00129E57 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BABB4222DC0DDCB00129E57 /* LottieView.swift */; };
 		0BABB4252DC0DE2B00129E57 /* love_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BABB4242DC0DE2B00129E57 /* love_lottie.json */; };
 		0BABB4282DC1026600129E57 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0BABB4272DC1026600129E57 /* Lottie */; };
+		0BB641062DDDBF91002C6DB2 /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB641052DDDBF91002C6DB2 /* QuoteCardView.swift */; };
+		0BB641082DDDC0CE002C6DB2 /* HomeToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB641072DDDC0CE002C6DB2 /* HomeToolBarView.swift */; };
 		0BD5B4B42D4DFC4100ADD5EE /* iQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B4B32D4DFC4100ADD5EE /* iQuotesApp.swift */; };
-		0BD5B4B62D4DFC4100ADD5EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B4B52D4DFC4100ADD5EE /* ContentView.swift */; };
+		0BD5B4B62D4DFC4100ADD5EE /* QuoteHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B4B52D4DFC4100ADD5EE /* QuoteHomeView.swift */; };
 		0BD5B4B82D4DFC4200ADD5EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5B4B72D4DFC4200ADD5EE /* Assets.xcassets */; };
 		0BD5B4BB2D4DFC4200ADD5EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5B4BA2D4DFC4200ADD5EE /* Preview Assets.xcassets */; };
 		0BD5B4C32D4DFCB600ADD5EE /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5B4C22D4DFCB600ADD5EE /* quotes.json */; };
@@ -20,11 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2A738D2DC205AE006FE3E5 /* TextToSpece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpece.swift; sourceTree = "<group>"; };
 		0BABB4222DC0DDCB00129E57 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0BABB4242DC0DE2B00129E57 /* love_lottie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = love_lottie.json; sourceTree = "<group>"; };
+		0BB641052DDDBF91002C6DB2 /* QuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
+		0BB641072DDDC0CE002C6DB2 /* HomeToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToolBarView.swift; sourceTree = "<group>"; };
 		0BD5B4B02D4DFC4100ADD5EE /* iQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD5B4B32D4DFC4100ADD5EE /* iQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuotesApp.swift; sourceTree = "<group>"; };
-		0BD5B4B52D4DFC4100ADD5EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0BD5B4B52D4DFC4100ADD5EE /* QuoteHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHomeView.swift; sourceTree = "<group>"; };
 		0BD5B4B72D4DFC4200ADD5EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BD5B4BA2D4DFC4200ADD5EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BD5B4C22D4DFCB600ADD5EE /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
@@ -44,6 +50,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB641042DDDBF73002C6DB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BB641052DDDBF91002C6DB2 /* QuoteCardView.swift */,
+				0BABB4222DC0DDCB00129E57 /* LottieView.swift */,
+				0BB641072DDDC0CE002C6DB2 /* HomeToolBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0BD5B4A72D4DFC4100ADD5EE = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +79,14 @@
 		0BD5B4B22D4DFC4100ADD5EE /* iQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				0BB641042DDDBF73002C6DB2 /* Views */,
 				0BD5B4C72D4E2F8F00ADD5EE /* Model */,
 				0BD5B4C42D4E2F6100ADD5EE /* Utils */,
 				0BD5B4C12D4DFC8B00ADD5EE /* Resources */,
 				0BD5B4B32D4DFC4100ADD5EE /* iQuotesApp.swift */,
-				0BD5B4B52D4DFC4100ADD5EE /* ContentView.swift */,
+				0BD5B4B52D4DFC4100ADD5EE /* QuoteHomeView.swift */,
 				0BD5B4B72D4DFC4200ADD5EE /* Assets.xcassets */,
 				0BD5B4B92D4DFC4200ADD5EE /* Preview Content */,
-				0BABB4222DC0DDCB00129E57 /* LottieView.swift */,
 			);
 			path = iQuotes;
 			sourceTree = "<group>";
@@ -95,6 +111,7 @@
 		0BD5B4C42D4E2F6100ADD5EE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0B2A738D2DC205AE006FE3E5 /* TextToSpece.swift */,
 				0BD5B4C52D4E2F7500ADD5EE /* QuoteProvider.swift */,
 			);
 			path = Utils;
@@ -183,11 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2A738E2DC205C1006FE3E5 /* TextToSpece.swift in Sources */,
 				0BD5B4C92D4E2F9A00ADD5EE /* Quotes.swift in Sources */,
 				0BD5B4C62D4E2F7500ADD5EE /* QuoteProvider.swift in Sources */,
 				0BABB4232DC0DDCB00129E57 /* LottieView.swift in Sources */,
-				0BD5B4B62D4DFC4100ADD5EE /* ContentView.swift in Sources */,
+				0BB641062DDDBF91002C6DB2 /* QuoteCardView.swift in Sources */,
+				0BD5B4B62D4DFC4100ADD5EE /* QuoteHomeView.swift in Sources */,
 				0BD5B4B42D4DFC4100ADD5EE /* iQuotesApp.swift in Sources */,
+				0BB641082DDDC0CE002C6DB2 /* HomeToolBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,8 +347,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,8 +376,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
