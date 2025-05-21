@@ -11,7 +11,7 @@ import SwiftUI
 struct iQuotesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuoteHomeView()
         }
          
     }
